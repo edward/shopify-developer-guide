@@ -1,0 +1,1 @@
+Everything in the XML API is available through nice-looking Ruby with this gem.

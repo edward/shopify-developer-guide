@@ -1,0 +1,3 @@
+Make a charge.
+Money goes to your Paypal account.
+(Cover more in depth in Billing)

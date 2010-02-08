@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+	"http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Processed by MultiMarkdown -->
+		<meta name="Author" content="Anonymous" />
+		<meta name="BaseHeaderLevel" content="1" />
+		<meta name="Format" content="complete" />
+		<title>ShopifyDoc</title>
+		<style type="text/css" media="all">
+body {font-family:  Optima; font-size: 10pt; line-height:  1.200000em; }
+h1 { font-size:  1.5em; text-align:  center; }
+h2 { font-size:  1.1em; text-align:  center; }
+h3 { font-size:  1.1em; }
+pre { margin-left:  5em;}
+span.annotation { text-decoration: underline; }
+</style>
+	</head>
+<body>
+
+<h1 id="shopifyappdeveloperguide">Shopify App Developer Guide</h1>
+
+<h2 id="intro">Intro</h2>
+
+<p><strong>Synopsis</strong> <br />
+What this guide will let you do, and who it’s for</p>
+
+<p><strong>Text</strong> <br />
+This guide will show you how to how to build Shopify Apps to make shop owners happier and you richer.
+This guide is intended for developers experienced with web programming. If you know the difference between a GET and a POST, and you know how to use loops and variables, you&#8217;re in good shape.</p>
+
+<h2 id="whywriteashopifyapp">Why write a Shopify App?</h2>
+
+<h3 id="itseasytomakemoney">It’s easy to make money</h3>
+
+<p>It&#8217;s easy to make money by making a Shopify App. If your app can generate more sales or save shop staff time, shops will install your app.
+Apps make money for you and the shop.</p>
+
+<p>Almost anything you can do under the shop admin.
+Some examples of what you could build:
+    Affiliate services
+    Fetching orders for business intelligence / analysis
+    Syncing product and stock levels with other services
+    Automating purchase order creation
+    Invoice printing for orders as they come in
+    Integration with other services like Freshbooks, Twitter, Campaign Monitor, and Facebook</p>
+
+<h4 id="trackaffiliates">Track Affiliates</h4>
+
+<p>Want to start an affiliate service? It&#8217;s easy.</p>
+
+<h4 id="orderfetching">Order Fetching</h4>
+
+<p>Need to fetch orders for business intelligence or other analysis? You can do it in a snap with an app.</p>
+
+<h4 id="productstocklevels">Product stock levels</h4>
+
+<p>Need to sync product and their stock levels with another service</p>
+
+<h4 id="automatepurchasing">Automate purchasing</h4>
+
+<p>If you know how much stock you&#8217;re moving, it&#8217;s easy to make simple predictions as how much you&#8217;ll need. Automate writing purchase orders by pulling in product and stock information from Shopify.</p>
+
+<h4 id="invoiceprinting">Invoice printing</h4>
+
+<p>Having to print up invoices for order shipments is a drag, and wastes time that could be better spent. Automate printing invoice with a simple app that watches for new paid orders and have it print out new invoices as the orders come in.</p>
+
+<h4 id="buildbridgesbetweenservices">Build bridges between services</h4>
+
+<p>Shop owners use multiple services to run their business, like Freshbooks for book keeping, and Campaign Monitor for marketing. Some shops also use Twitter and Facebook for promotion
+Wouldn&#8217;t it be nice if those services knew what their Shopify store knew? If only their orders were synced with their books, new customer email addresses added to the shop&#8217;s mailing list, and new products were automatically listed in their Facebook pages and announced on Twitter?
+Guess what? It&#8217;s all totally doable with an App.</p>
+
+<h2 id="makinganapp">Making an App</h2>
+
+<p>The first step in writing your blockbuster app is to become a Shopify Partner.
+[Explanation of why that’s awesome.]</p>
+
+<h4 id="letsyoumakeapps">Lets you make apps</h4>
+
+<h4 id="letsyougetpaid">Lets you get paid</h4>
+
+<p><strong>Synopsis</strong> <br />
+Make a charge.
+Money goes to your Paypal account.
+(Cover more in depth in Billing)</p>
+
+<p><strong>Text</strong> <br />
+As a Shopify Partner, you can now be paid</p>
+
+<p>A tutorial on making a Twitter app for products using the shopify_app plugin
+(Based on James&#8217; tutorial)
+<img id="appbutton" src="http://wiki.shopify.com/upload/0/03/Go_to_AppStore.png" alt="app button" title="" /></p>
+
+<h4 id="createanapp">Create an App</h4>
+
+<h4 id="returnurl">Return URL</h4>
+
+<h4 id="installshopify_appplugin">Install shopify_app plugin</h4>
+
+<h4 id="setauthcredentials">Set auth credentials</h4>
+
+<h4 id="installinatestshop">Install in a test shop</h4>
+
+<h4 id="deploytoheroku">Deploy to Heroku</h4>
+
+<h4 id="applicationlinks">Application Links</h4>
+
+<h4 id="testing">Testing</h4>
+
+<h3 id="howdoyoumakemoney">How do you make money?</h3>
+
+<p><strong>Synopsis</strong> <br />
+Making charges and recurring charges</p>
+
+<p><strong>Text</strong> <br />
+The easiest way to charge users for your app is by using the billing features built into the Shopify API.
+Charges made through the Shopify API come in two forms:
+1. One-shot
+2. Recurring
+The workflow for charging a shop for your application looks like this:</p>
+
+<ol>
+<li><p>A merchant keen to increase sales installs your application. After installing, Shopify redirects them to your site at http://yourapp.com</p></li>
+<li><p>Authentication occurs as explained in http://api.shopify.com/authentication.html</p></li>
+<li><p>The login authentication controller redirects the freshly authenticated shop owner to http://yourapp.com/welcome_to_your_new_service by a <code>before_filter :ensure_merchant_has_paid</code> line placed in the ApplicationController.</p></li>
+</ol>
+
+<p>This <code>ensure_merchant_has_paid</code> method looks just like the one described in http://api.shopify.com/billing.html under the  RecurringCharges section: it checks if the merchant has an existing RecurringApplicationCharge, and if not, it creates one.</p>
+
+<p>(Note that this means that the LoginController has a line like skip_before_filter :ensure_merchant_has_paid)</p>
+
+<ol>
+<li>Let&#8217;s assume that <code>ShopifyAPI::RecurringApplicationCharge.current</code> returned false, so the interpreter executes the <code>ShopifyAPI::RecurringApplicationCharge.create(:name =&gt; "Basic plan", :price =&gt; 4.99, :return_url =&gt; 'http://yourapp.com/charges/confirm')</code> call.</li>
+</ol>
+
+<p>That API call creates a <code>RecurringApplicationCharge</code> on Shopify, linked to your app and the current shop using your app. It&#8217;s created with the parameters you passed in: name, price, and return_url.</p>
+
+<p>Shopify returns some xml that the ShopifyAPI gem turns into a <code>RecurringApplicationCharge</code> object. That object has a <code>confirmation_url</code> set on it.</p>
+
+<ol>
+<li><p>The last line in the typical Recurring Charges example [http://api.shopify.com/billing.html] redirects the merchant to that <code>confirmation_url</code>. The page they&#8217;re redirected to is hosted at Shopify and looks similar to the one the merchant saw when they installed the app <img id="" src="http://api.shopify.com/images/MegaInvoiceInstallation.png" alt="" title="" />, but it says “YourApp would like to charge you #{price} on a recurring basis for the #{name}”. At the bottom of the page, there&#8217;s an Accept button, and a Decline button.</p></li>
+<li><p>If the user clicks Accept or Decline, Shopify redirects them to the return_url set on the <code>RecurringApplicationCharge</code> with a parameter “accept” set to true or false.</p></li>
+<li><p>The <code>RecurringCharge</code> <code>return_url</code> was set to http://yourapp.com/charges/confirm so the <code>ChargesController#confirm</code> handles that request. Inside <code>ChargesController#confirm</code> there’s code that checks if the <code>params[:accepted]</code> variable is set, and acts accordingly, by redirecting them back to where they should start out after approving to a certain plan or charge, or redirect them back to the app store if <code>params[:accepted]</code> is false.</p></li>
+</ol>
+
+<p>(Note the ChargesController also has a line like <code>skip_before_filter :ensure_merchant_has_paid</code> otherwise you would be stuck in an infinite loop.)</p>
+
+<ol>
+<li>That’s it! With the RecurringCharge in place, the <code>ShopifyAPI::RecurringApplicationCharge.current</code> call will return true (if an active recurring charge exists for that shop), and Shopify will pay you through the Paypal account you set up after the merchant pays Shopify their monthly bill.</li>
+</ol>
+
+<h3 id="chargetutorial">Charge Tutorial</h3>
+
+<p><strong>Synopsis</strong> <br />
+A tutorial on adding charges to the App we just built</p>
+
+<p><strong>Text</strong> <br />
+[Extend previous app tutorial with how to make charges]</p>
+
+<h3 id="implementingfreetrials">Implementing free trials</h3>
+
+<h3 id="implementingmultipleplanspricingtiers">Implementing multiple plans/pricing tiers</h3>
+
+<h3 id="howdoiknowwhenmyapphasbeenremoved">How do I know when my app has been removed?</h3>
+
+<p>Periodically make a HEAD request (nightly?) </p>
+
+<h3 id="whentoexpectpayment">When to expect payment</h3>
+
+<p><strong>Synopsis</strong> <br />
+When it happens + screenshot of the appropriate Partners area screen</p>
+
+<p><strong>Text</strong> <br />
+[When it happens + screenshot of the appropriate Partners area screen]</p>
+
+<h3 id="conditionsofpayment">Conditions of payment</h3>
+
+<p><strong>Synopsis</strong> <br />
+Explain the 80%/20% split and minimum payout</p>
+
+<p><strong>Text</strong> <br />
+80% of the charged amount is paid out to you as a Partner once the shop owner pays Shopify.</p>
+
+<h2 id="gettinginstalled:appstore">Getting Installed: App Store</h2>
+
+<h3 id="whyyouwanttobeinthere">Why you want to be in there</h3>
+
+<p><strong>Synopsis</strong> <br />
+The preferred Shopify App installation channel
+Lots of eyeballs => more installs</p>
+
+<p><strong>Text</strong> <br />
+The preferred Shopify App installation channel
+Lots of eyeballs => more installs => more money you make</p>
+
+<p>Show how to submit an app</p>
+
+<h4 id="settingaprice">Setting a price</h4>
+
+<p><strong>Synopsis</strong> <br />
+Setting a price in the app store does not automatically charge the user</p>
+
+<p><strong>Text</strong> <br />
+Setting a price in the app store does not automatically charge the user.
+To earn money, you app must use the Shopify Billing API or your own custom system.</p>
+
+<h4 id="makingagoodlookinglogo">Making a good looking logo</h4>
+
+<h3 id="howyougetinthere">How you get in there</h3>
+
+<h4 id="whatshouldimake">What should I make?</h4>
+
+<p><strong>Synopsis</strong> <br />
+How to milk the forums and Twitter to find out what to build.</p>
+
+<p>Shop owners &lt;3 you – finding a good idea to start on is easy.</p>
+
+<h4 id="peerreview">Peer Review</h4>
+
+<p><strong>Synopsis</strong> <br />
+Use the Shopify Developer, Designer, and General forums to beta-test your app.</p>
+
+<h4 id="whatmakesagoodapp">What makes a good App?</h4>
+
+<p><strong>Synopsis</strong> <br />
+A good app increases sales and/or decreases time spent elsewhere.</p>
+
+<p><strong>Text</strong> <br />
+A good app increases sales and/or decreases time spent elsewhere.</p>
+
+<p>[The following should have the same intentions as Zen of Python, by Tim Peters]
+Obviously useful
+  After clicking on the install link, the next screen the user must show the user why your application will boost sales. 
+    Easy to install 
+      Automate everything possible, setting up Webhooks programmatically if you need to catch new order notifications 
+      If there are any steps at all, make it obvious what they need to do. 
+      Short steps 
+      Screenshots 
+      Easy to onboard 
+      No signup screens should exist 
+        The user should be automatically created an account and their essential details filled in. See http://api.shopify.com/shop.html for what you can glean from their Shopify account. 
+        If there are missing essential details that you can’t already get from their Shopify account, present a screen on install showing just these missing details. 
+    After install 
+      pre-populate whatever you can with real data so the user has an idea of how it works and doesn&#8217;t have to work from a blank canvas 
+      Each screen should has obvious affordances. Ambiguous links and tabs are bad. Nothing should appear on a screen that is not absolutely essential. 
+    No showstopping bugs.</p>
+
+<p>You will be contacted by Shopify staff concerning any workflow or design issues</p>
+
+<h5 id="howlongthevettingprocesswilltake">How long the vetting process will take</h5>
+
+<h3 id="usingtheforums">Using the forums</h3>
+
+<h3 id="gettingfeaturedplacementintheappstore">Getting featured placement in the App Store</h3>
+
+<h3 id="advertisement">Advertisement</h3>
+
+<h3 id="authentication">Authentication</h3>
+
+<h1 id="authentication">Authentication</h1>
+
+<p>Every Shopify API call looks something like this:
+    https://api_key:password@some-store.myshopify.com/admin/some-resource</p>
+
+<p>For example, the following call fetches all of some-shop’s orders:
+    https://API_KEY:SOME_PASSWORD@some-shop.myshopify.com/admin/orders.xml</p>
+
+<p>Without a valid <strong>API key</strong> and <strong>password</strong>, nothing works.</p>
+
+<p>This article covers how to find and generate those two credentials.</p>
+
+<h2 id="apikeysandsecrets">API keys and secrets</h2>
+
+<p>Each Shopify application has an API key and a secret known only to you and Shopify. Don’t ever share this secret – if someone else gets a hold of it, they’ll be able to access anything your application has access to (which is really bad if shop owners have trusted you and only you with taking safe care of their data).</p>
+
+<p>To illustrate the process of authentication, let’s say that you’ve created a Shopify application called Mega Invoice, and it has an <strong>API key</strong> “invoice-api-key”, and a <strong>secret</strong> “hush”.</p>
+
+<p>We can see these credentials in this screenshot from the Shopify Partners admin: 
+<img id="megainvoicecredentials" src="http://api.shopify.com/images/MegaInvoiceCredentials.png" alt="Mega Invoice Credentials" title="" /></p>
+
+<p> Under normal circumstances, the API key and secret are strings of random characters (e.g. “f26eb9d7cd1352014d22a54e13bf6259”) but we’ll keep it simple for this example.
+Mega Invoice is set up at http://megainvoice.com so you’ve configured so that after installation, it redirects shop owners to
+    http://megainvoice.com/welcome</p>
+
+<p>We can see the <strong>return url</strong> from this screenshot from the Shopify Partners admin: <br />
+<img id="returnurlintheadmin" src="http://api.shopify.com/images/MegaInvoiceReturnUrl.png" alt="return url in the admin" title="" /></p>
+
+<h2 id="installationwalkthrough">Installation Walkthrough</h2>
+
+<p>Now that we’ve set the stage, let’s walk through a shop owner installing Mega Invoice:</p>
+
+<ol>
+<li>A shop owner is amazed by your marketing on the app store, and ends up looking at the “Installing Mega Invoice” screen, otherwise accessible
+ by doing a <code>GET &lt;shop url&gt;/admin/api/auth?api_key=&lt;API key&gt;</code> <br/> <img id="installationscreen" src="http://api.shopify.com/images/MegaInvoiceInstallation.png" alt="Installation screen" title="" /></li>
+<li><p>The shop owner clicks “Install”, and in doing so, grants your application access to their shop’s data.</p></li>
+<li><p>Shopify redirects to Mega Invoice’s <strong>return url</strong>, and appends the shop name and an authentication token as parameters: <code>GET http://megainvoice.com/welcome?shop=some-shop.myshopify.com&amp;t=a94a110d86d2452eb3e2af4cfb8a3828</code> (In this case, the authentication token <strong>t</strong> is a94a110d86d2452eb3e2af4cfb8a3828)</p></li>
+<li>Mega Invoice concatenates its secret with authentication token <strong>t</strong> and hashes the result into an MD5 hexdigest to generate the API password: <code>password = MD5.hexdigest(secret + t)</code> which in our example looks like: <code>password = MD5.hexdigest("hush" + "a94a110d86d2452eb3e2af4cfb8a3828")</code>  so the generated password specific to Mega Invoice and some-shop is <code>36b29a08b3113077f14777570c0577ed</code>
+ <em>Note that the order of parameters matters when you hash the secret + token – it must be in this order.</em></li>
+<li>That’s it! We’re done: we know the Mega Invoice API key and the password, so we can run an API call like this: <code>https://invoice-api-key:36b29a08b3113077f14777570c0577ed@some-shop.myshopify.com/admin/orders.xml</code> and receive all of some-shop’s orders.</li>
+</ol>
+
+<p>[Programmatically insert XML API documentation here]</p>
+
+<h4 id="affiliatestuff">Affiliate Stuff</h4>
+
+<p><strong>Synopsis</strong> <br />
+Detailed description of how landing-site, landing-site-ref and referring-site work</p>
+
+<p>(Lots of affiliate app devs ask questions about how this works exactly.)</p>
+
+<p><strong>Text</strong> <br />
+[How the cookies work]
+[How it works if the landing click came from a non-web browser]</p>
+
+<h3 id="shopify_apigem">shopify_api gem</h3>
+
+<p><strong>Synopsis</strong> <br />
+Everything in the XML API is available through nice-looking Ruby with this gem.</p>
+
+<p>Make sure to pass the right content headers
+    curl  -v -H &#8220;content-type: application/xml&#8221; “http://f6ba99f8k4j69fj77f1f84fd5121d1d7:4e7623b1b702j38fj45j58g79b24782db@your-test-shop.myshopify.com/admin/orders.xml“</p>
+
+<h4 id="passingtherightcontentheaders">Passing the right content headers</h4>
+
+<h4 id="usingcurl">Using curl</h4>
+
+<h4 id="calllimits">Call limits</h4>
+
+<p><strong>Synopsis</strong> <br />
+What to look for if things aren&#8217;t working, and how to fix it</p>
+
+<h3 id="makingoff-lineapicalls">Making off-line API calls</h3>
+
+<p><strong>Synopsis</strong> <br />
+How to save auth credentials to make API calls while they&#8217;re not logged in.</p>
+
+<p><strong>Text</strong> <br />
+How to save auth credentials to make API calls while they&#8217;re not logged in.</p>
+
+<h3 id="makingadesktopapp">Making a desktop App</h3>
+</body>
+</html>

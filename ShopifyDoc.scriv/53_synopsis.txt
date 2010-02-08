@@ -1,0 +1,3 @@
+Detailed description of how landing-site, landing-site-ref and referring-site work
+
+(Lots of affiliate app devs ask questions about how this works exactly.)

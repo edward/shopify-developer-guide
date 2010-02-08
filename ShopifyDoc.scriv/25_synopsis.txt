@@ -1,0 +1,1 @@
+Setting a price in the app store does not automatically charge the user

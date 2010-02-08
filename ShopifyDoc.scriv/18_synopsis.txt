@@ -1,0 +1,5 @@
+Enrolling in the Shopify Partner program
+
+API basics
+
+Deploying to Heroku

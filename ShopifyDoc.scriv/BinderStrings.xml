@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>16</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Shopify App Developer Guide</string>
+	</dict>
+	<key>17</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Apps make money for the developer and the shop.</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Why write a Shopify App?</string>
+	</dict>
+	<key>18</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Enrolling in the Shopify Partner program
+
+API basics
+
+Deploying to Heroku</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Making an App</string>
+	</dict>
+	<key>19</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Getting your app featured in the App Store
+
+Talking up your app in the forums
+
+Advertising</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Kicking Ass: Marketing &amp; More</string>
+	</dict>
+	<key>20</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>App Store 
+      </string>
+		<key>Title</key>
+		<string>Getting it out there: App Store</string>
+	</dict>
+	<key>21</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>The preferred Shopify App installation channel
+Lots of eyeballs =&gt; more installs</string>
+		<key>Text</key>
+		<string>The preferred Shopify App installation channel
+Lots of eyeballs =&gt; more installs =&gt; more money you make</string>
+		<key>Title</key>
+		<string>Why you want to be in there</string>
+	</dict>
+	<key>25</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Setting a price in the app store does not automatically charge the user</string>
+		<key>Text</key>
+		<string>Setting a price in the app store does not automatically charge the user.
+To earn money, you app must use the Shopify Billing API or your own custom system.</string>
+		<key>Title</key>
+		<string>Setting a price</string>
+	</dict>
+	<key>26</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>How you get in there 
+        </string>
+		<key>Title</key>
+		<string>How you get in there </string>
+	</dict>
+	<key>27</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>How to milk the forums and Twitter to find out what to build.
+
+Shop owners &lt;3 you – finding a good idea to start on is easy.</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>What should I make?</string>
+	</dict>
+	<key>29</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Use the Shopify Developer, Designer, and General forums to beta-test your app.</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Peer Review</string>
+	</dict>
+	<key>30</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>You will be contacted by Shopify staff concerning any workflow or design issues</string>
+		<key>Title</key>
+		<string>What the vetting process is like</string>
+	</dict>
+	<key>34</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Almost anything you can do under the shop admin.</string>
+		<key>Text</key>
+		<string>Almost anything you can do under the shop admin.
+Some examples of what you could build:
+	Affiliate services
+	Fetching orders for business intelligence / analysis
+	Syncing product and stock levels with other services
+	Automating purchase order creation
+	Invoice printing for orders as they come in
+	Integration with other services like Freshbooks, Twitter, Campaign Monitor, and Facebook</string>
+		<key>Title</key>
+		<string>What can Apps do?</string>
+	</dict>
+	<key>35</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Need to fetch orders for business intelligence or other analysis? You can do it in a snap with an app.</string>
+		<key>Title</key>
+		<string>Order Fetching</string>
+	</dict>
+	<key>36</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Need to sync product and their stock levels with another service</string>
+		<key>Title</key>
+		<string>Product stock levels</string>
+	</dict>
+	<key>37</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>If you know how much stock you're moving, it's easy to make simple predictions as how much you'll need. Automate writing purchase orders by pulling in product and stock information from Shopify.</string>
+		<key>Title</key>
+		<string>Automate purchasing</string>
+	</dict>
+	<key>38</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Having to print up invoices for order shipments is a drag, and wastes time that could be better spent. Automate printing invoice with a simple app that watches for new paid orders and have it print out new invoices as the orders come in.</string>
+		<key>Title</key>
+		<string>Invoice printing</string>
+	</dict>
+	<key>39</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Shop owners use multiple services to run their business, like Freshbooks for book keeping, and Campaign Monitor for marketing. Some shops also use Twitter and Facebook for promotion
+Wouldn't it be nice if those services knew what their Shopify store knew? If only their orders were synced with their books, new customer email addresses added to the shop's mailing list, and new products were automatically listed in their Facebook pages and announced on Twitter?
+Guess what? It's all totally doable with an App.</string>
+		<key>Title</key>
+		<string>Build bridges between services</string>
+	</dict>
+	<key>41</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>What you can do as a Shopify Partner</string>
+		<key>Text</key>
+		<string>The first step in writing your blockbuster app is to become a Shopify Partner.
+[Explanation of why that’s awesome.]</string>
+		<key>Title</key>
+		<string>Become a Shopify Partner</string>
+	</dict>
+	<key>46</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>A tutorial on making a Twitter app for products using the shopify_app plugin
+
+(Based on James' tutorial)</string>
+		<key>Text</key>
+		<string>A tutorial on making a Twitter app for products using the shopify_app plugin
+(Based on James' tutorial)
+![app button](http://wiki.shopify.com/upload/0/03/Go_to_AppStore.png)</string>
+		<key>Title</key>
+		<string>Your first App</string>
+	</dict>
+	<key>49</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Want to start an affiliate service? It's easy.</string>
+		<key>Title</key>
+		<string>Track Affiliates</string>
+	</dict>
+	<key>53</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Detailed description of how landing-site, landing-site-ref and referring-site work
+
+(Lots of affiliate app devs ask questions about how this works exactly.)</string>
+		<key>Text</key>
+		<string>[How the cookies work]
+[How it works if the landing click came from a non-web browser]</string>
+		<key>Title</key>
+		<string>Affiliate Stuff</string>
+	</dict>
+	<key>54</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>A listing of all API calls, replete with annotated call options/arguments, and detailed descriptions of each field in the results</string>
+		<key>Text</key>
+		<string>[Programmatically insert XML API documentation here]</string>
+		<key>Title</key>
+		<string>XML API Listing</string>
+	</dict>
+	<key>55</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Everything in the XML API is available through nice-looking Ruby with this gem.</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>shopify_api gem</string>
+	</dict>
+	<key>56</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Ensuring you have the right input, output, and expectations</string>
+		<key>Text</key>
+		<string>Make sure to pass the right content headers
+	curl  -v -H "content-type: application/xml" “http://f6ba99f8k4j69fj77f1f84fd5121d1d7:4e7623b1b702j38fj45j58g79b24782db@your-test-shop.myshopify.com/admin/orders.xml“</string>
+		<key>Title</key>
+		<string>Debugging</string>
+	</dict>
+	<key>57</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>How to charge shops for your app.</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Billing</string>
+	</dict>
+	<key>60</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Periodically make a HEAD request (nightly?) </string>
+		<key>Title</key>
+		<string>How do I know when my app has been removed?</string>
+	</dict>
+	<key>63</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>What to look for if things aren't working, and how to fix it</string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Call limits</string>
+	</dict>
+	<key>64</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string># Authentication
+Every Shopify API call looks something like this:
+	https://api_key:password@some-store.myshopify.com/admin/some-resource
+
+For example, the following call fetches all of some-shop’s orders:
+	https://API_KEY:SOME_PASSWORD@some-shop.myshopify.com/admin/orders.xml
+
+Without a valid **API key** and **password**, nothing works.
+
+This article covers how to find and generate those two credentials.
+## API keys and secrets
+Each Shopify application has an API key and a secret known only to you and Shopify. Don’t ever share this secret – if someone else gets a hold of it, they’ll be able to access anything your application has access to (which is really bad if shop owners have trusted you and only you with taking safe care of their data).
+
+To illustrate the process of authentication, let’s say that you’ve created a Shopify application called Mega Invoice, and it has an **API key** “invoice-api-key”, and a **secret** “hush”.
+
+We can see these credentials in this screenshot from the Shopify Partners admin: 
+![Mega Invoice Credentials](http://api.shopify.com/images/MegaInvoiceCredentials.png)
+
+ Under normal circumstances, the API key and secret are strings of random characters (e.g. “f26eb9d7cd1352014d22a54e13bf6259”) but we’ll keep it simple for this example.
+Mega Invoice is set up at http://megainvoice.com so you’ve configured so that after installation, it redirects shop owners to
+	http://megainvoice.com/welcome
+
+We can see the **return url** from this screenshot from the Shopify Partners admin: &lt;br /&gt;
+![return url in the admin](http://api.shopify.com/images/MegaInvoiceReturnUrl.png)
+## Installation Walkthrough
+Now that we’ve set the stage, let’s walk through a shop owner installing Mega Invoice:
+
+1. A shop owner is amazed by your marketing on the app store, and ends up looking at the “Installing Mega Invoice” screen, otherwise accessible
+	 by doing a ``GET &lt;shop url&gt;/admin/api/auth?api_key=&lt;API key&gt;`` &lt;br/&gt; ![Installation screen](http://api.shopify.com/images/MegaInvoiceInstallation.png)
+2. The shop owner clicks “Install”, and in doing so, grants your application access to their shop’s data.
+
+3. Shopify redirects to Mega Invoice’s **return url**, and appends the shop name and an authentication token as parameters: ``GET http://megainvoice.com/welcome?shop=some-shop.myshopify.com&amp;t=a94a110d86d2452eb3e2af4cfb8a3828`` (In this case, the authentication token **t** is a94a110d86d2452eb3e2af4cfb8a3828)
+4. Mega Invoice concatenates its secret with authentication token **t** and hashes the result into an MD5 hexdigest to generate the API password: ``password = MD5.hexdigest(secret + t)`` which in our example looks like: ``password = MD5.hexdigest("hush" + "a94a110d86d2452eb3e2af4cfb8a3828")``  so the generated password specific to Mega Invoice and some-shop is ``36b29a08b3113077f14777570c0577ed``
+ *Note that the order of parameters matters when you hash the secret + token – it must be in this order.*
+5. That’s it! We’re done: we know the Mega Invoice API key and the password, so we can run an API call like this: ``https://invoice-api-key:36b29a08b3113077f14777570c0577ed@some-shop.myshopify.com/admin/orders.xml`` and receive all of some-shop’s orders.</string>
+		<key>Title</key>
+		<string>Authentication</string>
+	</dict>
+	<key>65</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>Show how to submit an app</string>
+		<key>Title</key>
+		<string>Submitting your app</string>
+	</dict>
+	<key>67</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Make a charge.
+Money goes to your Paypal account.
+(Cover more in depth in Billing)</string>
+		<key>Text</key>
+		<string>As a Shopify Partner, you can now be paid</string>
+		<key>Title</key>
+		<string>Lets you get paid</string>
+	</dict>
+	<key>68</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Explain the 80%/20% split and minimum payout</string>
+		<key>Text</key>
+		<string>80% of the charged amount is paid out to you as a Partner once the shop owner pays Shopify.</string>
+		<key>Title</key>
+		<string>Conditions of payment</string>
+	</dict>
+	<key>70</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>When it happens + screenshot of the appropriate Partners area screen</string>
+		<key>Text</key>
+		<string>[When it happens + screenshot of the appropriate Partners area screen]</string>
+		<key>Title</key>
+		<string>When to expect payment</string>
+	</dict>
+	<key>71</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>A tutorial on adding charges to the App we just built</string>
+		<key>Text</key>
+		<string>[Extend previous app tutorial with how to make charges]</string>
+		<key>Title</key>
+		<string>Charge Tutorial</string>
+	</dict>
+	<key>72</key>
+	<dict>
+		<key>Notes</key>
+		<string>I can’t figure out where to put this yet</string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>Appendix: Shopify Apps</string>
+	</dict>
+	<key>76</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string> Logged in as Edward Ocampo-Gooding | Edit account | Logout  • Dashboard Referrals Apps Editing awesome Basic Information Application Name awesome This is the public facing name of your application. Required Permission Read/Write What kind of access does your application need? This value cannot be changed after creating your application. Post Install After Installation Please select one... Automatically redirect user Show button to user Show password to user This behaviour will be used every tim...</string>
+		<key>Text</key>
+		<string>￼
+Logged in as Edward Ocampo-Gooding | Edit account | Logout
+	•	Dashboard Referrals Apps
+Editing awesome
+Basic Information
+Application Name
+awesome
+This is the public facing name of your application.
+Required Permission
+Read/Write
+What kind of access does your application need? This value cannot be changed after creating your application.
+Post Install
+After Installation
+Please select one...
+Automatically redirect user
+Show button to user
+Show password to user
+This behaviour will be used every time a merchant grants access to your application, typically at every login. Read more about the authentication process.
+Return URL
+http://localhost:3000/login/finalize
+You can use a regular HTTP address here or a custom protocol hander.
+User-Facing URLs
+Preferences URL
+
+The absolute URL to your application’s user preferences page. e.g. http://yourapp.com/preferences
+Support URL
+
+The absolute URL to your application’s user support page. e.g. http://getsatisfaction.com/yourapp
+Application Images
+Application Icon
+
+Image resolution should be 100x100px. Valid file types are .jpg, .png, and .gif.
+Application Links
+Application Links allow users to access your application from their shop admin.
+￼
+An example of adding a link to
+an Overview or Details page.
+￼
+An example of adding a link to an
+Action Drop-down menu.
+￼Add Application Link
+or Cancel
+
+</string>
+		<key>Title</key>
+		<string>Shopify Partners</string>
+	</dict>
+	<key>77</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>A good app increases sales and/or decreases time spent elsewhere.</string>
+		<key>Text</key>
+		<string>A good app increases sales and/or decreases time spent elsewhere.
+
+[The following should have the same intentions as Zen of Python, by Tim Peters]
+Obviously useful
+  After clicking on the install link, the next screen the user must show the user why your application will boost sales. 
+    Easy to install 
+      Automate everything possible, setting up Webhooks programmatically if you need to catch new order notifications 
+      If there are any steps at all, make it obvious what they need to do. 
+      Short steps 
+      Screenshots 
+      Easy to onboard 
+      No signup screens should exist 
+        The user should be automatically created an account and their essential details filled in. See http://api.shopify.com/shop.html for what you can glean from their Shopify account. 
+        If there are missing essential details that you can’t already get from their Shopify account, present a screen on install showing just these missing details. 
+    After install 
+      pre-populate whatever you can with real data so the user has an idea of how it works and doesn't have to work from a blank canvas 
+      Each screen should has obvious affordances. Ambiguous links and tabs are bad. Nothing should appear on a screen that is not absolutely essential. 
+    No showstopping bugs.</string>
+		<key>Title</key>
+		<string>What makes a good App?</string>
+	</dict>
+	<key>78</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>How to save auth credentials to make API calls while they're not logged in.</string>
+		<key>Text</key>
+		<string>How to save auth credentials to make API calls while they're not logged in.</string>
+		<key>Title</key>
+		<string>Making off-line API calls</string>
+	</dict>
+	<key>81</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!</string>
+		<key>Title</key>
+		<string>Untitled</string>
+	</dict>
+	<key>82</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>Making charges and recurring charges</string>
+		<key>Text</key>
+		<string>The easiest way to charge users for your app is by using the billing features built into the Shopify API.
+Charges made through the Shopify API come in two forms:
+1. One-shot
+2. Recurring
+The workflow for charging a shop for your application looks like this:
+
+1. A merchant keen to increase sales installs your application. After installing, Shopify redirects them to your site at http://yourapp.com
+
+2. Authentication occurs as explained in http://api.shopify.com/authentication.html
+
+3. The login authentication controller redirects the freshly authenticated shop owner to http://yourapp.com/welcome_to_your_new_service by a ``before_filter :ensure_merchant_has_paid`` line placed in the ApplicationController.
+
+    This ``ensure_merchant_has_paid`` method looks just like the one described in http://api.shopify.com/billing.html under the  RecurringCharges section: it checks if the merchant has an existing RecurringApplicationCharge, and if not, it creates one.
+
+(Note that this means that the LoginController has a line like skip_before_filter :ensure_merchant_has_paid)
+
+4. Let's assume that ``ShopifyAPI::RecurringApplicationCharge.current`` returned false, so the interpreter executes the ``ShopifyAPI::RecurringApplicationCharge.create(:name =&gt; "Basic plan", :price =&gt; 4.99, :return_url =&gt; 'http://yourapp.com/charges/confirm')`` call.
+
+That API call creates a ``RecurringApplicationCharge`` on Shopify, linked to your app and the current shop using your app. It's created with the parameters you passed in: name, price, and return_url.
+
+Shopify returns some xml that the ShopifyAPI gem turns into a ``RecurringApplicationCharge`` object. That object has a ``confirmation_url`` set on it.
+
+5. The last line in the typical Recurring Charges example [http://api.shopify.com/billing.html] redirects the merchant to that ``confirmation_url``. The page they're redirected to is hosted at Shopify and looks similar to the one the merchant saw when they installed the app ![](http://api.shopify.com/images/MegaInvoiceInstallation.png), but it says “YourApp would like to charge you #{price} on a recurring basis for the #{name}”. At the bottom of the page, there's an Accept button, and a Decline button.
+
+6. If the user clicks Accept or Decline, Shopify redirects them to the return_url set on the ``RecurringApplicationCharge`` with a parameter “accept” set to true or false.
+
+7. The ``RecurringCharge`` ``return_url`` was set to http://yourapp.com/charges/confirm so the ``ChargesController#confirm`` handles that request. Inside ``ChargesController#confirm`` there’s code that checks if the ``params[:accepted]`` variable is set, and acts accordingly, by redirecting them back to where they should start out after approving to a certain plan or charge, or redirect them back to the app store if ``params[:accepted]`` is false.
+
+(Note the ChargesController also has a line like ``skip_before_filter :ensure_merchant_has_paid`` otherwise you would be stuck in an infinite loop.)
+
+8. That’s it! With the RecurringCharge in place, the ``ShopifyAPI::RecurringApplicationCharge.current`` call will return true (if an active recurring charge exists for that shop), and Shopify will pay you through the Paypal account you set up after the merchant pays Shopify their monthly bill.</string>
+		<key>Title</key>
+		<string>How do you make money?</string>
+	</dict>
+	<key>94</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string>What this guide will let you do, and who it’s for</string>
+		<key>Text</key>
+		<string>This guide will show you how to how to build Shopify Apps to make shop owners happier and you richer.
+This guide is intended for developers experienced with web programming. If you know the difference between a GET and a POST, and you know how to use loops and variables, you're in good shape.</string>
+		<key>Title</key>
+		<string>Intro</string>
+	</dict>
+	<key>95</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string></string>
+		<key>Title</key>
+		<string>What</string>
+	</dict>
+	<key>96</key>
+	<dict>
+		<key>Notes</key>
+		<string></string>
+		<key>Synopsis</key>
+		<string></string>
+		<key>Text</key>
+		<string>It's easy to make money by making a Shopify App. If your app can generate more sales or save shop staff time, shops will install your app.
+Apps make money for you and the shop.</string>
+		<key>Title</key>
+		<string>It’s easy to make money</string>
+	</dict>
+</dict>
+</plist>
